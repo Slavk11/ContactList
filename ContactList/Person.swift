@@ -7,16 +7,16 @@
 
 struct Person {
     
-    let name : String?
-    let surname: String?
-    let email: String?
-    let phoneNumber: String?
+    let name : String!
+    let surname: String!
+    let email: String!
+    let phoneNumber: String!
     
-    var fullName: String {
-        "\(String(describing: name)) \(String(describing: surname))"
+    var fullName: String! {
+        "\(name ?? "") \(surname ?? "")"
     }
     
-    static func getPersonInfo() -> [Person] {
+    /*static func getPersonInfo() -> [Person] {
         let dataStore = DataStore()
         return [
             Person(
@@ -24,8 +24,28 @@ struct Person {
                 surname: dataStore.surnames.randomElement(),
                 email: dataStore.emails.randomElement(),
                 phoneNumber: dataStore.phoneNumbers.randomElement()
-            )
+            ),
+            
         ]
     }
+     */
+    
+    static func getPersonInfo() -> [Person] {
+        let dataStore = DataStore()
+        var persons: [Person] = []
+        
+        for _ in 1...5 {
+            let person = Person(
+                name: dataStore.names.randomElement(),
+                surname: dataStore.surnames.randomElement(),
+                email: dataStore.emails.randomElement(),
+                phoneNumber: dataStore.phoneNumbers.randomElement()
+            )
+            persons.append(person)
+        }
+        
+        return persons
+    }
+    
 }
 

@@ -43,13 +43,7 @@
                             <outlet property="delegate" destination="v90-59-8Yw" id="jj5-7X-gH8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="dTn-6i-Okm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Mr6-pY-RHO">
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Qjh-4n-xEw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Persons List" id="dTn-6i-Okm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7f9-35-qrj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,9 +110,6 @@
             <point key="canvasLocation" x="18" y="6"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Qjh-4n-xEw"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
