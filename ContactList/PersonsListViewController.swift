@@ -13,8 +13,10 @@ final class PersonsListViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //guard let secondVC = segue.destination as? SecondViewController else { return }
-        
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let person = personList[indexPath.row]
+        let personDetailsVC = segue.destination as? PersonDetailsViewController
+        personDetailsVC?.person = person
     }
 }
 
