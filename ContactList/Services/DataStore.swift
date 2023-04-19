@@ -5,8 +5,6 @@
 //  Created by Сазонов Станислав on 18.04.2023.
 //
 
-
-
 final class DataStore {
     let names = [
         "John",
