@@ -9,17 +9,17 @@ import UIKit
 
 final class PersonDetailsViewController: UIViewController {
     
-    @IBOutlet var fullName: UILabel!
-    @IBOutlet var phone: UILabel!
-    @IBOutlet var mail: UILabel!
+    @IBOutlet var fullNameLabel: UILabel!
+    @IBOutlet var phoneNumberLabel: UILabel!
+    @IBOutlet var mailAdressLabel: UILabel!
     
     var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullName.text = person.fullName
-        phone.text = person.phoneNumber
-        mail.text = person.email
+        fullNameLabel.text = person.fullName
+        phoneNumberLabel.text = person.phoneNumber
+        mailAdressLabel.text = person.email
     }
 }

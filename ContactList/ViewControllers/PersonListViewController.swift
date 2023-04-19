@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PersonsListViewController: UITableViewController {
+final class PersonListViewController: UITableViewController {
     
     let personList = Person.getPersonInfo()
 
@@ -21,12 +21,7 @@ final class PersonsListViewController: UITableViewController {
 }
 
 // MARK: - UITableViewDataSource
-extension PersonsListViewController {
-    /*override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-     */
-    
+extension PersonListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         personList.count
     }
