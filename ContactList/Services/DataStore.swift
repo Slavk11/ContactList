@@ -25,11 +25,11 @@ final class DataStore {
     ]
     
     let phoneNumbers = [
-        "+1-605-323 15 56",
-        "+1-604-323 15 20",
-        "+1-604-212 10 20",
-        "+1-605-594 10 15",
-        "+1-605-732 10 14"
+        "+1 (605) 323-15-56",
+        "+1 (604) 323-15-20",
+        "+1 (604) 212-10-20",
+        "+1 (605) 594-10-15",
+        "+1 (605) 732-10-14"
     ]
     
     let emails = [
@@ -39,13 +39,6 @@ final class DataStore {
         "android@gmail.com",
         "admin@linuxmint.com"
     ]
-    
-    /*init(names: [String], surnames: [String], phoneNumbers: [String], emails: [String]) {
-          self.names = names
-          self.surnames = surnames
-          self.phoneNumbers = phoneNumbers
-          self.emails = emails
-     */
       }
 
 

@@ -16,20 +16,6 @@ struct Person {
         "\(name ?? "") \(surname ?? "")"
     }
     
-    /*static func getPersonInfo() -> [Person] {
-        let dataStore = DataStore()
-        return [
-            Person(
-                name: dataStore.names.randomElement(),
-                surname: dataStore.surnames.randomElement(),
-                email: dataStore.emails.randomElement(),
-                phoneNumber: dataStore.phoneNumbers.randomElement()
-            ),
-            
-        ]
-    }
-     */
-    
     static func getPersonInfo() -> [Person] {
         let dataStore = DataStore()
         var persons: [Person] = []
