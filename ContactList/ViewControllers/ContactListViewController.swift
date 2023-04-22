@@ -7,21 +7,11 @@
 
 import UIKit
 
-final class PersonListViewController: UITableViewController {
+final class ContactListViewController: UITableViewController {
     
     let personList = Person.getPersonInfo()
-
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let person = personList[indexPath.row]
-        let personDetailsVC = segue.destination as? PersonDetailsViewController
-        personDetailsVC?.person = person
-    }
-}
-
-// MARK: - UITableViewDataSource
-extension PersonListViewController {
+    
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         personList.count
     }
@@ -34,5 +24,13 @@ extension PersonListViewController {
         cell.contentConfiguration = content
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? PersonDetailsViewController else { return }
+            detailVC.person = personList[indexPath.row]
+        }
     }
 }
